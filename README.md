@@ -28,13 +28,14 @@ https://travis-ci.org/github/omarazam98/BookStore_4806-SwingBoot_Firebase
 https://p-4806.herokuapp.com
 
 ## Milestones
- - #### Milestone 1: Early Prototype due March 12th, 2021
- - #### Milestone 2: Early Alpha Release due March 12th, 2021
- - #### Milestone 3: Final Demo due March 12th, 2021
+ - #### [Milestone 1: Early Prototype due March 12th, 2021](https://github.com/omarazam98/BookStore_4806-SwingBoot_Firebase/issues/2)
+ - #### Milestone 2: Early Alpha Release due March 26th, 2021
+ - #### Milestone 3: Final Demo due April 9th, 2021
 
 ## Weekly Scrums
  - Meeting 1: March 5th 2021 (POST)
  - Meeting 2: March 11th 2021
+ - Meeting 3: March 21st 2021
 
 ## Associated Diagrams
 ### UML Class
