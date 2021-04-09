@@ -2,22 +2,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <button onclick="window.history.back()">Go Back</button>
-    <title>Shopping Cart</title>
+    <title>Book Store</title>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <style type="text/css">
         body {
-            background-image: url("https://i.pinimg.com/originals/39/87/2d/39872d5ebb92f7c6973c22c10751d62c.jpg");
+            background-image: url("https://youimg1.tripcdn.com/target/1A071b000001cev3dAA2C.jpg?proc=source%2Ftrip");
             background-size: cover;
             background-repeat: no-repeat;
         }
 
         h1 {
             color: midnightblue;
-        }
-
-        h2 {
-            background: rgba(255,255,255,0.33);
         }
 
         img {
@@ -39,9 +34,13 @@
         table, tbody, tr, th, td{
             background: rgba(255,255,255,0.33);
         }
+
     </style>
 </head>
 <body>
+<h1>Book Store</h1>
+<h2>Successfully Edited Book!</h2>
+<button onclick="window.history.go(-3)">Go Back to dashboard</button>
 <table style="float: left">
     <tr>
         <th th:text="'Cover'"/>
@@ -50,8 +49,9 @@
         <th th:text="'Genre'"/>
         <th th:text="'isbn'"/>
         <th th:text="'Cost'"/>
+        <th th:text="'Inventory'"/>
     </tr>
-    <tr th:each="book: ${bookList}">
+    <tr>
         <td>
             <img th:src="${book.img}">
         </td>
@@ -75,15 +75,6 @@
         <input name="id" th:value="${book.id}" type="hidden"/>
     </tr>
 </table>
-<H2>Total Cost:  <span th:text="${totalCost}"></span></H2>
-<form action="/purchasedBooks" method="post">
-    <input th:field="${user.email}" type="hidden">
-    <input th:field="${user.password}" type="hidden">
-    <input th:field="${user.name}" type="hidden">
-    <input th:field="${user.purchasedBooks}" type="hidden">
-    <input th:field="${user.id}" type="hidden">
-    <input th:field="${user.shoppingCart}" type="hidden">
-    <input type="submit" value="Purchase Books"/>
-</form>
+
 </body>
 </html>

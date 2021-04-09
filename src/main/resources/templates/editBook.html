@@ -19,37 +19,32 @@
 </head>
 <body>
 <h1>Book Store</h1>
-<h2>Successfully Logged In!</h2>
-<H2>Welcome  <span th:text="${user.name}"></span></H2>
 
 
 <div style="float: right">
     <h2>Book Information</h2>
-    <form action="/addBookSuccess" method="post">
+    <form th:object="${book}" action="/editBookSuccess" method="get">
         <label for="name">Name</label>
-        <input id="name" name="name" type="text">
+        <input th:value="${book.name}" id="name" name="name" type="text">
         <label for="author">Author</label>
-        <input id="author" name="author" type="text">
+        <input th:value="${book.author}" id="author" name="author" type="text">
         <label for="img">Image Url</label>
-        <input id="img" name="img" type="text">
+        <input th:value="${book.img}" id="img" name="img" type="text">
         <label for="genre">Genre</label>
-        <input id="genre" name="genre" type="text">
+        <input th:value="${book.genre}" id="genre" name="genre" type="text">
         <label for="isbn">ISBN</label>
-        <input id="isbn" name="isbn" type="text">
+        <input th:value="${book.isbn}" id="isbn" name="isbn" type="text">
         <label for="cost">Cost</label>
-        <input id="cost" name="cost" type="number">
+        <input th:value="${book.cost}" id="cost" name="cost" type="number">
         <label for="inventory">Inventory</label>
-        <input id="inventory" name="inventory" type="number">
-        <input type="submit" value="Add Book"/>
+        <input th:value="${book.inventory}" id="inventory" name="inventory" type="number">
+        <input id="book" name="book" th:value="${book.id}" type="hidden">
+
+        <input type="submit" value="Save Edits"/>
+
     </form>
 </div>
 
 
-<form action="/ownerBookstore" method="post">
-    <input type="submit" value="Go to Book Store Library"/>
-</form>
-<form action="/" method="post">
-    <input type="submit" value="Logout"/>
-</form>
 </body>
 </html>
