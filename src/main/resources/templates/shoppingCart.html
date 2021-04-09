@@ -16,6 +16,10 @@
             color: midnightblue;
         }
 
+        h2 {
+            background: rgba(255,255,255,0.33);
+        }
+
         img {
             max-width: 100px;
             max-height: 150px;
@@ -63,11 +67,15 @@
 
         </td>
         <td th:text="${book.cost}">
+
+        </td>
+        <td th:text="${book.inventory}">
             <button type="submit" value="Submit">Add to Cart</button>
         </td>
         <input name="id" th:value="${book.id}" type="hidden"/>
     </tr>
 </table>
+<H2>Total Cost:  <span th:text="${totalCost}"></span></H2>
 <form action="/purchasedBooks" method="post">
     <input th:field="${user.email}" type="hidden">
     <input th:field="${user.password}" type="hidden">
