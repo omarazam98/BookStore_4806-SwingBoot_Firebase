@@ -57,7 +57,7 @@ public class DashboardController {
             CollectionReference bookCR = db.getFirebase().collection("Books");
             bookCR.add(newBook);
             model.addAttribute("book", newBook);
-            return new ModelAndView("/addBookSuccess");
+            return new ModelAndView("addBookSuccess");
         } else {
             return new ModelAndView("addBookFailure");
         }

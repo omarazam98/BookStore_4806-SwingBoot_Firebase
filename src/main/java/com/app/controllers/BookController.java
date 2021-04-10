@@ -81,7 +81,7 @@ public class BookController {
 
         db.getFirebase().collection("Books").document(b.id).set(book);
         model.addAttribute("book", book);
-        return new ModelAndView("/editBookSuccess");
+        return new ModelAndView("editBookSuccess");
     }
 }
 
